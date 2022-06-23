@@ -28,7 +28,7 @@ def success():
         text= pytesseract.image_to_string(images)
         result = gTTS(text=text, lang='en', slow=False)
         result.save("result.mp3")
-       # os.system("result.mp3")
+        os.system("result.mp3")
     return render_template('success.html',text=text)
 
 
